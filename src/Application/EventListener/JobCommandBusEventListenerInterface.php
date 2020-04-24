@@ -4,7 +4,7 @@ declare(strict_types=1);
 
 namespace MicroModule\Task\Application\EventListener;
 
-use MicroModule\Base\Application\Command\CommandInterface;
+use MicroModule\Base\Domain\Command\CommandInterface;
 use Interop\Queue\Message;
 
 /**

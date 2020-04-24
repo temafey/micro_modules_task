@@ -4,8 +4,8 @@ declare(strict_types=1);
 
 namespace MicroModule\Task\Tests\Unit\Application\Processor;
 
-use MicroModule\Base\Application\Command\CommandInterface;
-use MicroModule\Base\Application\Factory\CommandFactoryInterface;
+use MicroModule\Base\Domain\Command\CommandInterface;
+use MicroModule\Base\Domain\Factory\CommandFactoryInterface;
 use MicroModule\Task\Application\Processor\JobCommandBusProcessor;
 use MicroModule\Task\Infrastructure\Service\Test\JobRunner;
 use Broadway\EventDispatcher\Testing\TraceableEventDispatcher;
