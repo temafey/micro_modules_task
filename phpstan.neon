@@ -1,0 +1,7 @@
+includes:
+	- vendor/phpstan/phpstan-mockery/extension.neon
+	- vendor/phpstan/phpstan-phpunit/extension.neon
+
+parameters:
+    ignoreErrors:
+        - '#Parameter .* of .* expects .*, Mockery\\MockInterface given.#'
