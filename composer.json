@@ -4,7 +4,7 @@
     "description": "Micro module Task common library",
     "license": "proprietary",
     "require": {
-        "php": "^7.3",
+        "php": "^7.3 || ^8.0",
         "beberlei/assert": "^3.2",
         "broadway/broadway": "^2.2",
         "queue-interop/amqp-interop": "^0.8",
