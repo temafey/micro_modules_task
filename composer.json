@@ -11,11 +11,11 @@
         "queue-interop/queue-interop": "^0.7|^0.8",
         "enqueue/enqueue": "^0.10",
         "enqueue/fs": "^0.10",
-        "enqueue/job-queue": "^0.10",
         "enqueue/null": "^0.10",
         "league/tactician-bundle": "^1.1",
         "league/tactician-command-events": "^0.6.0",
         "micro-module/base": "^0.5",
+        "micro-module/job-queue": "^0.10.8",
         "psr/log": "^1.1"
     },
     "require-dev": {
