@@ -13,9 +13,9 @@
         "enqueue/fs": "^0.10",
         "enqueue/null": "^0.10",
         "league/tactician-bundle": "^1.1",
-        "micro-module/tactician-command-events": "^0.7",
+        "micro-module/tactician-command-events": "~0.7",
         "micro-module/base": "~0.7",
-        "micro-module/job-queue": "^0.10.8",
+        "micro-module/job-queue": "~0.10",
         "psr/log": "^1.1"
     },
     "require-dev": {
