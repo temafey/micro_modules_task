@@ -7,6 +7,7 @@ namespace MicroModule\Task\Application\Processor;
 use MicroModule\Base\Domain\Command\CommandInterface;
 use MicroModule\Base\Domain\Factory\CommandFactoryInterface;
 use MicroModule\Base\Utils\LoggerTrait;
+use MicroModule\Common\Domain\ValueObject\ProcessUuid;
 use MicroModule\Task\Application\EventListener\JobCommandBusEventListenerInterface;
 use Assert\Assertion;
 use Assert\AssertionFailedException;
@@ -20,6 +21,7 @@ use Interop\Queue\Context;
 use Interop\Queue\Message;
 use Interop\Queue\Processor;
 use League\Tactician\CommandBus;
+use Ramsey\Uuid\UuidInterface;
 use Throwable;
 
 /**
@@ -93,9 +95,14 @@ class JobCommandBusProcessor implements Processor, CommandSubscriberInterface, J
     {
         /** @var CommandInterface $command */
         [$type, $command] = $this->makeCommand($message);
+        $processUuid =  $command->getProcessUuid();
+
+        if (!$processUuid instanceof UuidInterface) {
+            $processUuid = ProcessUuid::fromNative(null);
+        }
         // Build unique job name
-        $name = $type.'_'.$command->getUuid()->toString();
-        $ownerId = $message->getMessageId() ?? $command->getUuid()->toString();
+        $name = $type.'_'.$processUuid->toString();
+        $ownerId = $message->getMessageId() ?? $processUuid->toString();
 
         $this->eventDispatcher->dispatch(
             JobCommandBusEventListenerInterface::EVENT_PRE_PROCESS,
