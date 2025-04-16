@@ -7,7 +7,7 @@
         "php": "^8.0",
         "beberlei/assert": "^3.2",
         "micro-module/enqueue": "^0.10",
-        "enqueue/fs": "^0.10",
+        "micro-module/enqueue-fs "^0.10",
         "micro-module/null": "^0.11",
         "league/tactician-bundle": "^1.1",
         "micro-module/base": "^0.8",
