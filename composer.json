@@ -15,7 +15,7 @@
         "micro-module/job-queue": "~0.10",
         "micro-module/tactician-command-events": "~0.7",
         "psr/log": "^1.1",
-        "queue-interop/amqp-interop": "^0.9",
+        "queue-interop/amqp-interop": "^0.8",
         "queue-interop/queue-interop": "^0.7|^0.8"
     },
     "require-dev": {
