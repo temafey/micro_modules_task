@@ -10,7 +10,7 @@
         "micro-module/enqueue-fs": "^0.10",
         "micro-module/null": "^0.11",
         "league/tactician-bundle": "^1.1",
-        "micro-module/base": "^0.8",
+        "micro-module/base": "^0.9",
         "micro-module/broadway": "^2.6",
         "micro-module/job-queue": "~0.10",
         "micro-module/tactician-command-events": "~0.7",
